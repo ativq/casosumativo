@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComiShop</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Estilos personalizados */
+        body {
+            background-color: #f0eada; /* Fondo pastel */
+        }
+        .navbar {
+            background-color: #f0c6a7; /* Naranja pastel un poco más oscuro */
+        }
+        .jumbotron {
+            background-color: #d8c1a3; /* Fondo pastel más oscuro */
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .carousel-separator {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        .comic-description {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">ComiShop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#productos">Productos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <!-- Agrega más elementos de navegación si es necesario -->
+        </ul>
+    </div>
+</nav>
+
+<!-- Espacio entre navbar y carrusel -->
+<div class="carousel-separator"></div>
+
+<!-- Inicio -->
+<div id="inicio" class="container">
+    <!-- Mensaje de bienvenida -->
+    <div class="jumbotron text-center">
+        <h1 class="display-4">¡Bienvenido a ComiShop!</h1>
+        <p class="lead">Descubre una amplia selección de cómics de tus personajes favoritos.</p>
+        <hr class="my-4">
+        <p>Explora nuestro catálogo y encuentra las mejores historias para disfrutar solo o en familia.</p>
+    </div>
+
+    <!-- Espacio entre mensaje de bienvenida y carrusel -->
+    <div class="carousel-separator"></div>
+
+    <!-- Carrusel -->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/img/invincible.jpg" class="d-block w-100" alt="Cómic 1">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/spiderman.jpg" class="d-block w-100" alt="Cómic 2">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/img/batman.jpg" class="d-block w-100" alt="Cómic 3">
+            </div>
+            <!-- Agrega más elementos del carrusel si es necesario -->
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!-- Espacio entre inicio y productos -->
+<div class="carousel-separator"></div>
+
+<!-- Productos -->
+<div id="productos" class="container">
+    <h2>Productos</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <img src="./assets/img/inv1.webp" class="img-fluid rounded" alt="Cómic 1" onclick="mostrarDescripcion('comic1')">
+            <div class="comic-description" id="comic1-description">
+                <h3>Invincible Vol.1</h3>
+                <p>Mark Grayson es como casi todos los jóvenes de su edad. Está en el último año de un instituto americano normal. Tiene un trabajo basura a tiempo parcial después de la escuela y los fines de semana. Le gustan bastante las chicas, pero no las entiende del todo. Le gusta salir con sus amigos y dormir hasta tarde los sábados (al menos hasta que comienzan sus dibujos animados favoritos). La única diferencia entre Mark y los demás es que su padre es el superhéroe más poderoso del planeta… y últimamente parece que ha heredado sus poderes.
+
+                    Creada por Robert Kirkman (The Walking Dead) y Cory Walker (Superpatriot), Invencible no tardó en trascender la etiqueta de serie revelación para convertirse en una de las cabeceras de género superheroico más aclamadas de los últimos tiempos. El presente volumen, en el que también colabora el dibujante Ryan Ottley (El asombroso Spiderman), recopila los 13 primeros números de la colección adaptada por Amazon Prime Video en forma de serie de animación.</p>
+                <p>Precio: $44.000</p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('comic1')">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img src="./assets/img/El_Hombre_De_Acero_DC_pocket_ecc.jpg" class="img-fluid rounded" alt="Cómic 2" onclick="mostrarDescripcion('comic2')">
+            <div class="comic-description" id="comic2-description">
+                <h3>El Hombre De Acero (DC Pocket)</h3>
+                <p>Durante los últimos minutos del planeta Krypton, solo hubo un motivo para la esperanza: la nave que transportaba al único superviviente. Criado en la Tierra con el nombre de Clark Kent, Kal-El siempre ha sabido que era diferente. Y ahora que se muda a Metropolis, cuenta con el beneplácito de sus padres adoptivos para convertirse en el héroe que salvará a la humanidad de numerosos peligros. Superman ha llegado para quedarse, pero con él también aparecen amenazas como un empresario implacable llamado Lex Luthor… y aliados incómodos como el mismísimo Batman.
+                    John Byrne escribe y dibuja El Hombre de Acero, la historia sobre el origen del Último Hijo de Krypton que marcó a toda una generación de lectores.</p>
+                <p>Precio: $13.500 </p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('comic2')">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img src="./assets/img/Cubierta_Batman_11_1411.jpg" class="img-fluid rounded" alt="Cómic 3" onclick="mostrarDescripcion('comic3')">
+            <div class="comic-description" id="comic3-description">
+                <h3>Batman Núm. 11</h3>
+                <p>¡El Amanecer de DC sigue aquí! ¡La batalla final! ¡El enfrentamiento definitivo entre Máscara Roja y Batman culmina con un número muy especial y lleno de sorpresas! El equipo de lujo formado por Chip Zdarsky y Jorge Jiménez (¡junto a un montón de estrellas invitadas!) homenajean al Caballero Oscuro ¡No te lo puedes perder!</p>
+                <p>Precio: $6.700</p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('comic3')">Agregar al carrito</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <img src="./assets/img/Cubierta_TortugasNinja_ElUltimoRonin_LosAnosPerdidos_4.jpg" class="img-fluid rounded" alt="Cómic 4" onclick="mostrarDescripcion('comic4')">
+            <div class="comic-description" id="comic4-description">
+                <h3>Las Tortugas Ninja: El Último Ronin – Los Años Perdidos Núm. 4 De 5</h3>
+                <p>¡Una aventura en dos tiempos! Michelangelo ha sido capturado y tendrá que luchar contra gladiadores por su libertad. ¿Está preparado? Años más tarde, Casey Marie Jones enseña a sus alumnos las lecciones del sensei. ¡Nueva York está en peligro!</p>
+                <p>Precio: $4.700</p>
+                <button class="btn btn-primary" onclick="agregarAlCarrito('comic4')">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Espacio entre productos y pie de página -->
+<div class="carousel-separator"></div>
+
+<!-- Pie de página -->
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">© 2024 ComiShop. Todos los derechos reservados.</span>
+        <br>
+        <span class="text-muted">Dirección: Calle de la Fantasía, Ciudad del Cómic</span>
+        <br>
+        <span class="text-muted">Teléfono: +569 1234 5678 | Correo electrónico: info@comishop.com</span>
+    </div>
+</footer>
+
+<script>
+    function mostrarDescripcion(comicId) {
+        var descripcion = document.getElementById(comicId + '-description');
+        if (descripcion.style.display === 'none') {
+            descripcion.style.display = 'block';
+        } else {
+            descripcion.style.display = 'none';
+        }
+    }
+
+    function agregarAlCarrito(comicId) {
+        // Lógica para agregar el cómic al carrito
+        // Aquí puedes implementar la funcionalidad según lo requieras
+        alert('El cómic ' + comicId + ' ha sido agregado al carrito.');
+    }
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+        /* Estilos personalizados */
+        body {
+            background-color: #f0eada; /* Fondo pastel */
+        }
+        .navbar {
+            background-color: #f0c6a7; /* Naranja pastel un poco más oscuro */
+        }
+        .jumbotron {
+            background-color: #d8c1a3; /* Fondo pastel más oscuro */
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .carousel-separator {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        .comic-description {
+            display: none;
+        }
