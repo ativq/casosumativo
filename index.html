@@ -7,15 +7,14 @@
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Estilos personalizados */
         body {
-            background-color: #f0eada; /* Fondo pastel */
+            background-color: #f0eada; 
         }
         .navbar {
-            background-color: #f0c6a7; /* Naranja pastel un poco más oscuro */
+            background-color: #f0c6a7; 
         }
         .jumbotron {
-            background-color: #d8c1a3; /* Fondo pastel más oscuro */
+            background-color: #d8c1a3; 
             margin-bottom: 20px;
             padding: 20px;
             border-radius: 10px;
@@ -30,8 +29,6 @@
     </style>
 </head>
 <body>
-
-<!-- Barra de navegación -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">ComiShop</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,28 +45,18 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Contacto</a>
             </li>
-            <!-- Agrega más elementos de navegación si es necesario -->
         </ul>
     </div>
 </nav>
-
-<!-- Espacio entre navbar y carrusel -->
 <div class="carousel-separator"></div>
-
-<!-- Inicio -->
 <div id="inicio" class="container">
-    <!-- Mensaje de bienvenida -->
     <div class="jumbotron text-center">
         <h1 class="display-4">¡Bienvenido a ComiShop!</h1>
         <p class="lead">Descubre una amplia selección de cómics de tus personajes favoritos.</p>
         <hr class="my-4">
         <p>Explora nuestro catálogo y encuentra las mejores historias para disfrutar solo o en familia.</p>
     </div>
-
-    <!-- Espacio entre mensaje de bienvenida y carrusel -->
     <div class="carousel-separator"></div>
-
-    <!-- Carrusel -->
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -81,7 +68,6 @@
             <div class="carousel-item">
                 <img src="./assets/img/batman.jpg" class="d-block w-100" alt="Cómic 3">
             </div>
-            <!-- Agrega más elementos del carrusel si es necesario -->
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -93,11 +79,7 @@
         </a>
     </div>
 </div>
-
-<!-- Espacio entre inicio y productos -->
 <div class="carousel-separator"></div>
-
-<!-- Productos -->
 <div id="productos" class="container">
     <h2>Productos</h2>
     <div class="row">
@@ -142,11 +124,7 @@
         </div>
     </div>
 </div>
-
-<!-- Espacio entre productos y pie de página -->
 <div class="carousel-separator"></div>
-
-<!-- Pie de página -->
 <footer class="footer">
     <div class="container">
         <span class="text-muted">© 2024 ComiShop. Todos los derechos reservados.</span>
@@ -156,7 +134,6 @@
         <span class="text-muted">Teléfono: +569 1234 5678 | Correo electrónico: info@comishop.com</span>
     </div>
 </footer>
-
 <script>
     function mostrarDescripcion(comicId) {
         var descripcion = document.getElementById(comicId + '-description');
@@ -166,10 +143,7 @@
             descripcion.style.display = 'none';
         }
     }
-
     function agregarAlCarrito(comicId) {
-        // Lógica para agregar el cómic al carrito
-        // Aquí puedes implementar la funcionalidad según lo requieras
         alert('El cómic ' + comicId + ' ha sido agregado al carrito.');
     }
 </script>
